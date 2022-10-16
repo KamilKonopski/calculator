@@ -5,7 +5,7 @@ async function handler(req, res) {
 		const data = req.body;
 
 		const client = await MongoClient.connect(
-			"mongodb+srv://MaerS:<password>@cluster0.jhdjp2o.mongodb.net/?retryWrites=true&w=majority"
+			"mongodb+srv://<password>:Ka123411@cluster0.jhdjp2o.mongodb.net/?retryWrites=true&w=majority"
 		);
 		const db = client.db();
 
@@ -15,7 +15,7 @@ async function handler(req, res) {
 
 		client.close();
 
-		res;
+		res.status(201).json({ message: "Meetup inserted!" });
 	}
 }
 
