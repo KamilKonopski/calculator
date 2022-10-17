@@ -26,9 +26,7 @@ function HomePage(props) {
 }
 
 export async function getStaticProps() {
-	const client = await MongoClient.connect(
-		"mongodb+srv://@cluster0.jhdjp2o.mongodb.net/?retryWrites=true&w=majority"
-	);
+	const client = await MongoClient.connect(`${process.env.REACT_APP_API_KEY}`);
 	const db = client.db();
 
 	const meetupsCollection = db.collection("meetups");

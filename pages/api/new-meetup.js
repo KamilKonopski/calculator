@@ -5,7 +5,7 @@ async function handler(req, res) {
 		const data = req.body;
 
 		const client = await MongoClient.connect(
-			"mongodb+srv://@cluster0.jhdjp2o.mongodb.net/?retryWrites=true&w=majority"
+			`${process.env.REACT_APP_API_KEY}`
 		);
 		const db = client.db();
 
