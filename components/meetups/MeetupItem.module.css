@@ -3,16 +3,16 @@
 }
 
 .image {
-  width: 100%;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
   height: 20rem;
   overflow: hidden;
-  border-top-right-radius: 6px;
-  border-top-left-radius: 6px;
+  width: 100%;
 }
 
 .image img {
-  width: 100%;
   object-fit: cover;
+  width: 100%;
 }
 
 .content {
@@ -21,8 +21,8 @@
 }
 
 .content h3 {
-  font-size: 1.25rem;
   color: #2c292b;
+  font-size: 1.25rem;
 }
 
 .actions {
@@ -31,13 +31,14 @@
 }
 
 .actions button {
-  font: inherit;
-  cursor: pointer;
-  color: #77002e;
-  border: 1px solid #77002e;
   background-color: transparent;
-  padding: 0.5rem 1.5rem;
+  border: 1px solid #77002e;
   border-radius: 4px;
+  color: #77002e;
+  cursor: pointer;
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  
 }
 
 .actions button:hover,
