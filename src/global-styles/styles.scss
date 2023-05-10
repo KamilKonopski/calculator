@@ -1,0 +1,15 @@
+@import "styles/root.scss";
+@import "styles/fonts.scss";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-family: "Roboto", sans-serif;
+	font-size: 10px;
+	background: linear-gradient(189deg, #06013bfa 0%, #1a0979 35%, #00d4ff 100%);
+}
