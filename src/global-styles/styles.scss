@@ -13,9 +13,13 @@ body {
 	font-size: 10px;
 	background: linear-gradient(189deg, #06013bfa 0%, #1a0979 35%, #00d4ff 100%)
 		no-repeat;
+}
+
+#root {
 	width: 100%;
 	height: 100vh;
 	display: flex;
-	align-items: center;
+	align-content: center;
 	justify-content: center;
+	flex-wrap: wrap;
 }
