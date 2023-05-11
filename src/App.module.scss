@@ -1,0 +1,19 @@
+.heading {
+	font-size: 3.6rem;
+	color: var(--color-bg);
+	margin: 0 10rem 1rem 0;
+	flex-basis: 100%;
+	text-align: center;
+}
+
+.app {
+	display: flex;
+	flex-direction: column;
+	width: 350px;
+	margin: 0 auto;
+	height: 50vh;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--color-bg);
+	border-radius: 2rem;
+}
