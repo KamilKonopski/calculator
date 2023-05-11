@@ -1,0 +1,14 @@
+.button {
+	background-color: var(--color-choose);
+	border: none;
+	border-radius: 8px;
+	padding: 1rem 2rem;
+	font-size: 1.7rem;
+	color: var(--color-bg);
+	cursor: pointer;
+	transition: background-color 0.3s linear;
+
+	&:hover {
+		background-color: lighten($color: #f9a826, $amount: 10%);
+	}
+}
