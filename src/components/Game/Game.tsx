@@ -11,9 +11,7 @@ interface IGameProps {
 const Game: React.FC<IGameProps> = ({ quizData }) => {
 	const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
 	const handleCorrectAnswer = (event: MouseEvent<HTMLButtonElement>) => {
-		console.log();
-
-		if (event.currentTarget.innerText.slice(1) === quizData.correct) {
+		if (event.currentTarget.innerText.slice(1).toLocaleLowerCase().trim() === quizData.correct.toLocaleLowerCase()) {
 			setIsCorrect(true);
 		} else {
 			setIsCorrect(false);
@@ -25,9 +23,8 @@ const Game: React.FC<IGameProps> = ({ quizData }) => {
 			<h2>{quizData.question}</h2>
 			<ul>
 				{quizData.options.map(({ letter, option }) => (
-					// !null && !isCorrect ?? 'loose' : "win"
 					<button onClick={handleCorrectAnswer}>
-						<span>{letter}</span>
+						<span>{letter} </span>
 						{option}
 					</button>
 				))}
