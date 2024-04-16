@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 
 import classes from "./Statistic.module.scss";
 
-const Statistic: React.FC = () => {
-	const [stats, setStats] = useState<{ wins: number; losses: number }>({
-		wins: 0,
-		losses: 0
-	})
+interface IStatsProps {
+	stats: { wins: number; losses: number }
+}
+
+const Statistic: React.FC<IStatsProps> = ({stats}) => {
 
 	return (
 		<div className={classes.stats}>
