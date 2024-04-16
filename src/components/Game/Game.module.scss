@@ -1,0 +1,39 @@
+.game {
+    
+    &__options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-around;
+        padding: 0 2.5rem;
+    }
+
+    &__option {
+        background-color: transparent;
+        border: 2px solid var(--color-options);
+        border-radius: 1rem 0 1rem 0;
+        color: var(--color-text);
+        cursor: pointer;
+        display: flex;
+        flex-basis: 40%;
+        font-size: 1.6rem;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        transition: .2s linear;
+
+        &:hover {
+            background-color: var(--color-options);
+            color: var(--color-bg);
+        }
+
+        &:hover .game__letter {
+            color: var(--color-bg);
+        }
+    }
+
+    &__letter {
+        color: var(--color-options);
+        transition: .2s linear;
+        padding-right: 1.5rem;
+    }
+}
