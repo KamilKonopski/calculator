@@ -10,15 +10,16 @@ interface IGameProps {
 	};
 	gameOver: () => void;
 	quizWin: () => void;
-	quizLose: () => void
+	quizLose: () => void;
+	next: () => void
 }
 
-const Game: React.FC<IGameProps> = ({ quizData, gameOver, quizWin, quizLose }) => {
+const Game: React.FC<IGameProps> = ({ quizData, gameOver, quizWin, quizLose, next }) => {
 	const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
 	const handleCorrectAnswer = (event: MouseEvent<HTMLButtonElement>) => {
 		if (event.currentTarget.innerText.slice(1).toLocaleLowerCase().trim() === quizData.correct.toLocaleLowerCase()) {
 			quizWin();
-			gameOver();
+			next();
 		} else {
 			setIsCorrect(false);
 			quizLose();
